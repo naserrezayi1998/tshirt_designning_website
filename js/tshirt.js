@@ -1,15 +1,13 @@
-
-            let canvas = new fabric.Canvas('tshirt-canvas');
-
-            function updateTshirtImage(imageURL){
-                fabric.Image.fromURL(imageURL, function(img) {                   
-                    img.scaleToHeight(300);
-                    img.scaleToWidth(300); 
-                    canvas.centerObject(img);
-                    canvas.add(img);
-                    canvas.renderAll();
-                });
-            }
+let canvas = new fabric.Canvas('tshirt-canvas');
+function updateTshirtImage(imageURL){
+    fabric.Image.fromURL(imageURL, function(img) {                   
+        img.scaleToHeight(300);
+        img.scaleToWidth(300); 
+        canvas.centerObject(img);
+        canvas.add(img);
+        canvas.renderAll();
+    });
+}
             
             // Update the TShirt color according to the selected color by the user
             document.getElementById("tshirt-color").addEventListener("change", function(){
