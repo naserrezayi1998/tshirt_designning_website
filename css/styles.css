@@ -1,55 +1,141 @@
+/* styles.css */  
+
+/* General Styles */  
 body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+.container {  
+    max-width: 1200px;  
+    margin: 0 auto;  
     padding: 20px;  
 }  
-#shirtDiv {  
-    width: 100%; /* Full width for responsiveness */  
-    max-width: 530px; /* Maximum width for desktop */  
-    position: relative;  
+
+/* Typography */  
+h3 {  
+    font-size: 24px;  
+    color: #333;  
+}  
+
+.well {  
     background-color: #fff;  
-    margin: 0 auto; /* Center on larger screens */  
+    border-radius: 5px;  
+    box-shadow: 0 1px 3px rgba(0,0,0,.1);  
+    padding: 15px;  
+    margin-bottom: 20px;  
 }  
-#drawingArea {  
-    margin: 0 auto; /* Center horizontally */  
-    width: 80%; /* Responsive width */  
-    max-width: 200px; /* Maximum width */  
-    height: 400px;  
-    display: flex; /* Use flexbox */  
-    align-items: center; /* Center vertically */  
-    justify-content: center; /* Center horizontally */  
-    position: relative; /* Change to relative */  
-    z-index: 10;  
+
+/* Buttons */  
+.btn {  
+    background-color: #007bff;  
+    color: #fff;  
+    border: none;  
+    border-radius: 5px;  
+    padding: 10px 15px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
 }  
-#tshirtFacing {  
-    max-width: 100%; /* Ensure it stays within the parent */  
-    height: auto; /* Maintain aspect ratio */  
+
+.btn:hover {  
+    background-color: #0056b3;  
 }  
+
+/* Navbar */  
+.nav {  
+    list-style: none;  
+    padding: 0;  
+}  
+
+.nav li {  
+    display: inline-block;  
+    margin: 5px;  
+}  
+
+/* Responsive Styles */  
+@media (max-width: 768px) {  
+    .row {  
+        display: flex;  
+        flex-direction: column;  
+    }  
+    .span6, .span3 {  
+        width: 100%;  
+        margin-bottom: 20px;  
+    }  
+}  
+
+@media (min-width: 769px) {  
+    .row {  
+        display: flex;  
+        justify-content: space-between;  
+    }  
+    .span6 {  
+        width: 65%;  
+    }  
+    .span3 {  
+        width: 30%;  
+    }  
+}  
+
+/* Form Elements */  
+input[type="text"], input[type="file"], select {  
+    width: calc(100% - 20px);  
+    padding: 10px;  
+    margin-top: 10px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+
+/* Color Previews */  
 .color-preview {  
     display: inline-block;  
-    width: 30px;  
-    height: 30px;  
-    border: 1px solid #000; /* Add border */  
+    width: 20px;  
+    height: 20px;  
+    border: 1px solid #ccc;  
+    margin-right: 5px;  
     cursor: pointer;  
 }  
+
+/* Canvas Styling */  
+#shirtDiv {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: column;  
+}  
+
+#drawingArea {  
+    position: relative;  
+}  
+
+/* Media Queries for Canvas Responsiveness */  
 @media (max-width: 768px) {  
-    #drawingArea {  
-        top: 60px; /* Adjust position for small screens */  
+    #shirtDiv {  
+        width: 100%;  
     }  
-    #main-content {  
-        width: 66.67%; /* span6 equivalent in a 12-column grid */  
-        float: left;   /* Align to the left */  
+    #tcanvas {  
+        width: 100%;  
+        height: auto;  
     }  
-
-    #sidebar {  
-        width: 25%; /* span3 equivalent in a 12-column grid */  
-        float: right; /* Align to the right */  
-    } 
 }  
 
-/* Default styles for span6 and span3 */  
-#main-content {  
-    width: 100%; /* Full width on smaller screens */  
+/* Misc */  
+.inline {  
+    display: inline-block;  
 }  
 
-#sidebar {  
-    width: 100%; /* Full width on smaller screens */  
-}   
+.pull-left {  
+    float: left;  
+}  
+
+.pull-right {  
+    float: right;  
+}  
+
+.clearfix::after {  
+    content: "";  
+    clear: both;  
+    display: table;  
+}
