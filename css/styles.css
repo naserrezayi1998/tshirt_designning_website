@@ -1,0 +1,55 @@
+body {  
+    padding: 20px;  
+}  
+#shirtDiv {  
+    width: 100%; /* Full width for responsiveness */  
+    max-width: 530px; /* Maximum width for desktop */  
+    position: relative;  
+    background-color: #fff;  
+    margin: 0 auto; /* Center on larger screens */  
+}  
+#drawingArea {  
+    margin: 0 auto; /* Center horizontally */  
+    width: 80%; /* Responsive width */  
+    max-width: 200px; /* Maximum width */  
+    height: 400px;  
+    display: flex; /* Use flexbox */  
+    align-items: center; /* Center vertically */  
+    justify-content: center; /* Center horizontally */  
+    position: relative; /* Change to relative */  
+    z-index: 10;  
+}  
+#tshirtFacing {  
+    max-width: 100%; /* Ensure it stays within the parent */  
+    height: auto; /* Maintain aspect ratio */  
+}  
+.color-preview {  
+    display: inline-block;  
+    width: 30px;  
+    height: 30px;  
+    border: 1px solid #000; /* Add border */  
+    cursor: pointer;  
+}  
+@media (max-width: 768px) {  
+    #drawingArea {  
+        top: 60px; /* Adjust position for small screens */  
+    }  
+    #main-content {  
+        width: 66.67%; /* span6 equivalent in a 12-column grid */  
+        float: left;   /* Align to the left */  
+    }  
+
+    #sidebar {  
+        width: 25%; /* span3 equivalent in a 12-column grid */  
+        float: right; /* Align to the right */  
+    } 
+}  
+
+/* Default styles for span6 and span3 */  
+#main-content {  
+    width: 100%; /* Full width on smaller screens */  
+}  
+
+#sidebar {  
+    width: 100%; /* Full width on smaller screens */  
+}   
