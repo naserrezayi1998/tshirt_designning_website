@@ -1,141 +1,75 @@
-/* styles.css */  
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* General Styles */  
-body {  
-    font-family: Arial, sans-serif;  
-    background-color: #f4f4f4;  
-    margin: 0;  
-    padding: 0;  
-}  
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-.container {  
-    max-width: 1200px;  
-    margin: 0 auto;  
-    padding: 20px;  
-}  
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
 
-/* Typography */  
-h3 {  
-    font-size: 24px;  
-    color: #333;  
-}  
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
 
-.well {  
-    background-color: #fff;  
-    border-radius: 5px;  
-    box-shadow: 0 1px 3px rgba(0,0,0,.1);  
-    padding: 15px;  
-    margin-bottom: 20px;  
-}  
+nav ul li {
+    margin: 0 15px;
+}
 
-/* Buttons */  
-.btn {  
-    background-color: #007bff;  
-    color: #fff;  
-    border: none;  
-    border-radius: 5px;  
-    padding: 10px 15px;  
-    cursor: pointer;  
-    transition: background-color 0.3s;  
-}  
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-.btn:hover {  
-    background-color: #0056b3;  
-}  
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
-/* Navbar */  
-.nav {  
-    list-style: none;  
-    padding: 0;  
-}  
+article {
+    flex: 1 1 calc(33.333% - 20px);
+    margin: 10px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-.nav li {  
-    display: inline-block;  
-    margin: 5px;  
-}  
+img {
+    max-width: 100%;
+    height: auto;
+}
 
-/* Responsive Styles */  
-@media (max-width: 768px) {  
-    .row {  
-        display: flex;  
-        flex-direction: column;  
-    }  
-    .span6, .span3 {  
-        width: 100%;  
-        margin-bottom: 20px;  
-    }  
-}  
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
 
-@media (min-width: 769px) {  
-    .row {  
-        display: flex;  
-        justify-content: space-between;  
-    }  
-    .span6 {  
-        width: 65%;  
-    }  
-    .span3 {  
-        width: 30%;  
-    }  
-}  
+    article {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
 
-/* Form Elements */  
-input[type="text"], input[type="file"], select {  
-    width: calc(100% - 20px);  
-    padding: 10px;  
-    margin-top: 10px;  
-    border: 1px solid #ccc;  
-    border-radius: 5px;  
-}  
-
-/* Color Previews */  
-.color-preview {  
-    display: inline-block;  
-    width: 20px;  
-    height: 20px;  
-    border: 1px solid #ccc;  
-    margin-right: 5px;  
-    cursor: pointer;  
-}  
-
-/* Canvas Styling */  
-#shirtDiv {  
-    display: flex;  
-    justify-content: center;  
-    align-items: center;  
-    flex-direction: column;  
-}  
-
-#drawingArea {  
-    position: relative;  
-}  
-
-/* Media Queries for Canvas Responsiveness */  
-@media (max-width: 768px) {  
-    #shirtDiv {  
-        width: 100%;  
-    }  
-    #tcanvas {  
-        width: 100%;  
-        height: auto;  
-    }  
-}  
-
-/* Misc */  
-.inline {  
-    display: inline-block;  
-}  
-
-.pull-left {  
-    float: left;  
-}  
-
-.pull-right {  
-    float: right;  
-}  
-
-.clearfix::after {  
-    content: "";  
-    clear: both;  
-    display: table;  
+@media (max-width: 480px) {
+    article {
+        flex: 1 1 100%;
+    }
 }
