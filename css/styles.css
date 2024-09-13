@@ -25,6 +25,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -69,7 +70,19 @@ img {
 }
 
 @media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+    }
+
     article {
         flex: 1 1 100%;
+    }
+
+    header {
+        font-size: 1.2em;
+    }
+
+    nav ul li {
+        margin: 10px 0;
     }
 }
