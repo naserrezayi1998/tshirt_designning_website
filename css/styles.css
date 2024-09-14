@@ -10,6 +10,10 @@ body {
     background-color: #f4f4f4;  
 }  
 
+.color-preview {
+    border-radius:30 px;
+}
+
 .container {  
     width: 100%;  
     height: auto;
