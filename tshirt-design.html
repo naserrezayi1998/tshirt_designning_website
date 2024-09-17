@@ -97,11 +97,13 @@
                                             <hr>
                                             <form id="uploadForm" action="../../uploadLogo.php" method="post" enctype="multipart/form-data">
                                                 <input type="file" name="fileToUpload" id="fileToUpload">
-                                                <input class="btn btn-primary" type="submit" value="ارسال همین عکس برای چاپ" name="submit" id="submitLogo">
+                                                <button class="sendBtn" role="button">ارسال برای چاپ</button>
+
+                                                <button type="button" class="orderBagBtn" name="addToTheBag" id="addToTheBag">افزودن به سبد خرید 
+                                                    <i class="icon-briefcase icon-white"></i>
+                                                </button>
                                             </form>
-                                            <button type="button" class="btn btn-large btn-block btn-success" name="addToTheBag" id="addToTheBag">افزودن به سبد خرید 
-                                                <i class="icon-briefcase icon-white"></i>
-                                            </button>
+                                            
                                         </div>  
                                     </div>
                                     </center>
