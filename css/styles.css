@@ -114,14 +114,28 @@ section {
     display: flex;  
     justify-content: space-between;  
     align-items: center;  
+    padding: 10px;  
+    border: 1px solid #ddd;  
+    border-radius: 8px;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    background-color: #fff;  
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }  
 
 .input-append input {  
     flex: 1;  
-    padding: 10px;  
-    border: 1px solid #ccc;  
+    padding: 12px 15px;  
+    border: 1px solid #ddd;  
     border-radius: 4px;  
     margin-right: 10px;  
+    font-size: 16px;  
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;  
+}  
+
+.input-append input:focus {  
+    border-color: #a0a0a0;  
+    box-shadow: 0 0 5px rgba(160, 160, 160, 0.5);  
+    outline: none;  
 }  
 
 /* File upload button styles */  
@@ -230,4 +244,38 @@ label[for="tshirttype"] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#add-text {
+    display: inline-block;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#add-text:hover {
+    background-color: #45a049; /* Darker green on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on hover */
+}
+
+#add-text:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(72, 207, 173, 0.5); /* Focus ring */
+}
+
+@media (max-width: 768px) {
+    #add-text {
+        width: 100%; /* Full width on smaller screens */
+        padding: 15px; /* Increased padding for better touch targets */
+    }
 }
