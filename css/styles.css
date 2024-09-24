@@ -207,3 +207,27 @@ input[type="file"] {
     background-position: right 10px center;
     background-size: 12px;
 }
+
+label[for="tshirttype"] {
+    margin-right: 10px; 
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav li {
+    margin: 0 10px;
+    width: 50px; /* Set the width of the circle */
+    height: 50px; /* Set the height of the circle */
+    border-radius: 50%; /* Make the element circular */
+    background-color: #ccc; /* Optional: Set a background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
