@@ -31,7 +31,7 @@
                                     <li><a tabindex="-1" href="#" onclick="setFont('Georgia');" class="Georgia">Georgia</a></li>
                                     <li><a tabindex="-1" href="#" onclick="setFont('Courier');" class="Courier">Courier</a></li>
                                     <li><a tabindex="-1" href="#" onclick="setFont('Comic Sans MS');" class="ComicSansMS">Comic Sans MS</a></li>
-                                    <li><a tabindex="-1" href="#" onclick="setFont('Impact');" class="Impact">```html
+                                    <li><a tabindex="-1" href="#" onclick="setFont('Impact');" class="Impact">Impact</a></li>
                                     <li><a tabindex="-1" href="#" onclick="setFont('Monaco');" class="Monaco">Monaco</a></li>
                                     <li><a tabindex="-1" href="#" onclick="setFont('Optima');" class="Optima">Optima</a></li>
                                     <li><a tabindex="-1" href="#" onclick="setFont('Hoefler Text');" class="Hoefler Text">Hoefler Text</a></li>
@@ -88,20 +88,22 @@
                                     <div class="well">
                                         <div class="input-append">
                                             <input class="span2" id="text-string" type="text" placeholder="متن خود را وارد کنید">
-                                            <button id="add-text" class="btn" title="Add text">Add Text</button>
+                                            <button id="add-text" class="btn" title="Add text"><i class="icon-share-alt"></i></button>
                                         </div>
                                         <!-- <div id="avatarlist">
                                             <img style="cursor:pointer;" class="img-polaroid" src="./img/porche.png">
                                         </div> -->
                                         <div>
                                             <hr>
-                                            <form id="uploadForm" action="../../uploadLogo.php" method="post" enctype="multipart/form-data">
-                                                <input type="file" name="fileToUpload" id="fileToUpload">
-                                                <button class="sendBtn" role="button">ارسال برای چاپ</button>
-
-                                                <button type="button" class="orderBagBtn" name="addToTheBag" id="addToTheBag">افزودن به سبد خرید 
-                                                    <i class="icon-briefcase icon-white"></i>
-                                                </button>
+                                            <form id="uploadForm" class="form-container">
+                                                <h2>Upload File</h2>
+                                                <div class="form-group">
+                                                    <label for="fileInput">Choose Your Picture:</label>
+                                                    <input type="file" id="fileInput" name="fileInput">
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn">Upload</button>
+                                                </div>
                                             </form>
                                             
                                         </div>  
